@@ -1,15 +1,22 @@
 import { registerDependencies } from 'mjml-validator';
-import { BodyComponent } from 'mjml-core';
+import MjText from 'mjml-text';
 
 registerDependencies({
     'mj-column': ['cm-preferences'],
     'mj-hero': ['cm-preferences'],
-    'mj-text': ['cm-preferences'],
     'cm-preferences': [],
 });
 
-export default class CmPreferences extends BodyComponent {
+export default class CmPreferences extends MjText {
+    static allowedAttributes = {
+        ...MjText.allowedAttributes,
+    };
+
+    static defaultAttributes = {
+        ...MjText.defaultAttributes,
+    };
+
     render() {
-        return `<preferences>${this.getContent()}</preferences>`;
+        return `<div ${this.htmlAttributes({ style: 'text' })}><preferences>${this.getContent()}</preferences></div>`;
     }
 }

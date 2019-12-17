@@ -1,5 +1,5 @@
 import { registerDependencies } from 'mjml-validator';
-import { BodyComponent } from 'mjml-core';
+import MjText from 'mjml-text';
 
 registerDependencies({
     'mj-column': ['cm-singleline'],
@@ -8,16 +8,21 @@ registerDependencies({
     'cm-singleline': [],
 });
 
-export default class CmSingleline extends BodyComponent {
+export default class CmSingleline extends MjText {
     static allowedAttributes = {
+        ...MjText.allowedAttributes,
         label: 'string',
         repeatertitle: 'string',
     };
 
+    static defaultAttributes = {
+        ...MjText.defaultAttributes,
+    };
+
     render() {
-        return `<singleline ${this.htmlAttributes({
+        return `<div ${this.htmlAttributes({ style: 'text' })}><singleline ${this.htmlAttributes({
             label: this.getAttribute('label'),
             repeatertitle: this.getAttribute('repeatertitle'),
-        })}>${this.getContent()}</singleline>`;
+        })}>${this.getContent()}</singleline></div>`;
     }
 }
