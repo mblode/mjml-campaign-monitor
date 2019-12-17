@@ -1,5 +1,5 @@
-import MjText from 'mjml-text';
 import { registerDependencies } from 'mjml-validator';
+import { BodyComponent } from 'mjml-core';
 
 registerDependencies({
     'mj-column': ['cm-preferences'],
@@ -8,8 +8,8 @@ registerDependencies({
     'cm-preferences': [],
 });
 
-class CmPreferences extends MjText {
-    renderContent() {
+class CmPreferences extends BodyComponent {
+    render() {
         return `<preferences>${this.getContent()}</preferences>`;
     }
 }

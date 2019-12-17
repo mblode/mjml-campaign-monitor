@@ -1,5 +1,5 @@
-import MjText from 'mjml-text';
 import { registerDependencies } from 'mjml-validator';
+import { BodyComponent } from 'mjml-core';
 
 registerDependencies({
     'mj-column': ['cm-multiline'],
@@ -8,7 +8,7 @@ registerDependencies({
     'cm-multiline': [],
 });
 
-class CmMultiline extends MjText {
+class CmMultiline extends BodyComponent {
     static allowedAttributes = {
         label: 'string',
     };

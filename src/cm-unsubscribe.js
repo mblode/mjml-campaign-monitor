@@ -1,5 +1,5 @@
-import MjText from 'mjml-text';
 import { registerDependencies } from 'mjml-validator';
+import { BodyComponent } from 'mjml-core';
 
 registerDependencies({
     'mj-column': ['cm-unsubscribe'],
@@ -8,8 +8,8 @@ registerDependencies({
     'cm-unsubscribe': [],
 });
 
-class CmUnsubscribe extends MjText {
-    renderContent() {
+class CmUnsubscribe extends BodyComponent {
+    render() {
         return `<unsubscribe>${this.getContent()}</unsubscribe>`;
     }
 }
