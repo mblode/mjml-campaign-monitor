@@ -8,6 +8,9 @@ List of components:
 - cm-repeater
 - cm-layout
 - cm-image
+- cm-singleline
+- cm-multiline
+- cm-unsubscribe
 
 ## Setup
 
