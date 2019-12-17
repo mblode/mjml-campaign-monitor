@@ -14,8 +14,8 @@ export default class CmMultiline extends BodyComponent {
     };
 
     render() {
-        return `<multiline${this.htmlAttributes({
+        return `<multiline ${this.htmlAttributes({
             label: this.getAttribute('label'),
-        })}>${this.renderChildren(this.props.children)}</multiline>`;
+        })}>${this.getContent()}</multiline>`;
     }
 }

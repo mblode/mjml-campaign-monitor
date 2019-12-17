@@ -10,6 +10,6 @@ registerDependencies({
 
 export default class CmUnsubscribe extends BodyComponent {
     render() {
-        return `<unsubscribe>${this.renderChildren(this.props.children)}</unsubscribe>`;
+        return `<unsubscribe>${this.getContent()}</unsubscribe>`;
     }
 }

@@ -10,6 +10,6 @@ registerDependencies({
 
 export default class CmPreferences extends BodyComponent {
     render() {
-        return `<preferences>${this.renderChildren(this.props.children)}</preferences>`;
+        return `<preferences>${this.getContent()}</preferences>`;
     }
 }

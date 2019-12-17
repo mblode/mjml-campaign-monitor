@@ -18,6 +18,6 @@ export default class CmSingleline extends BodyComponent {
         return `<singleline ${this.htmlAttributes({
             label: this.getAttribute('label'),
             repeatertitle: this.getAttribute('repeatertitle'),
-        })}>${this.renderChildren(this.props.children)}</singleline>`;
+        })}>${this.getContent()}</singleline>`;
     }
 }
