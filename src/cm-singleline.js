@@ -2,33 +2,30 @@ import MjText from 'mjml-text';
 import { registerDependencies } from 'mjml-validator';
 
 registerDependencies({
-    'mj-column': ['mc-text'],
-    'mj-hero': ['mc-text'],
-    'mc-text': [],
+    'mj-column': ['cm-singleline'],
+    'mj-hero': ['cm-singleline'],
+    'mj-text': ['cm-singleline'],
+    'cm-singleline': [],
 });
 
-export default class CmSingleline extends MjText {
+class CmSingleline extends MjText {
     static allowedAttributes = {
-        ...MjText.allowedAttributes,
         label: 'string',
         repeatertitle: 'string',
     };
 
-    static defaultAttributes = {
-        ...MjText.defaultAttributes,
-    };
-
     renderContent() {
         return `
-      <singleline
-        ${this.htmlAttributes({
-            style: 'text',
-            label: this.getAttribute('label'),
-            repeatertitle: this.getAttribute('repeatertitle'),
-        })}
-      >
-        ${this.getContent()}
-      </singleline>
-    `;
+            <singleline
+                ${this.htmlAttributes({
+                    label: this.getAttribute('label'),
+                    repeatertitle: this.getAttribute('repeatertitle'),
+                })}
+            >
+                ${this.getContent()}
+            </singleline>
+        `;
     }
 }
+
+export default CmSingleline;

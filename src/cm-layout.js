@@ -1,5 +1,5 @@
-import { registerDependencies } from 'mjml-validator';
 import { BodyComponent } from 'mjml-core';
+import { registerDependencies } from 'mjml-validator';
 
 registerDependencies({
     'cm-repeater': ['cm-layout'],
@@ -19,8 +19,6 @@ registerDependencies({
         'mj-navbar',
         'mj-wrapper',
         'cm-image',
-        'cm-singleline',
-        'cm-multiline',
     ],
 });
 

@@ -2,31 +2,28 @@ import MjText from 'mjml-text';
 import { registerDependencies } from 'mjml-validator';
 
 registerDependencies({
-    'mj-column': ['mc-text'],
-    'mj-hero': ['mc-text'],
-    'mc-text': [],
+    'mj-column': ['cm-multiline'],
+    'mj-hero': ['cm-multiline'],
+    'mj-text': ['cm-multiline'],
+    'cm-multiline': [],
 });
 
-export default class CmMultiline extends MjText {
+class CmMultiline extends MjText {
     static allowedAttributes = {
-        ...MjText.allowedAttributes,
         label: 'string',
     };
 
-    static defaultAttributes = {
-        ...MjText.defaultAttributes,
-    };
-
-    renderContent() {
+    render() {
         return `
-      <multiline
-        ${this.htmlAttributes({
-            style: 'text',
-            label: this.getAttribute('label'),
-        })}
-      >
-        ${this.getContent()}
-      </multiline>
-    `;
+            <multiline
+                ${this.htmlAttributes({
+                    label: this.getAttribute('label'),
+                })}
+            >
+                ${this.getContent()}
+            </multiline>
+        `;
     }
 }
+
+export default CmMultiline;

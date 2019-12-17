@@ -2,12 +2,13 @@ import MjText from 'mjml-text';
 import { registerDependencies } from 'mjml-validator';
 
 registerDependencies({
-    'mj-column': ['mc-text'],
-    'mj-hero': ['mc-text'],
-    'mc-text': [],
+    'mj-column': ['cm-unsubscribe'],
+    'mj-hero': ['cm-unsubscribe'],
+    'mj-text': ['cm-unsubscribe'],
+    'cm-unsubscribe': [],
 });
 
-export default class CmUnsubscribe extends MjText {
+class CmUnsubscribe extends MjText {
     renderContent() {
         return `
             <unsubscribe>
@@ -16,3 +17,5 @@ export default class CmUnsubscribe extends MjText {
         `;
     }
 }
+
+export default CmUnsubscribe;

@@ -23,12 +23,14 @@ registerDependencies({
     ],
 });
 
-export default class CmRepeater extends BodyComponent {
+class CmRepeater extends BodyComponent {
     render() {
         return `
-        <repeater>
-        ${this.renderChildren(this.props.children)}
-        </repeater>
-      `;
+            <repeater>
+            ${this.renderChildren(this.props.children)}
+            </repeater>
+        `;
     }
 }
+
+export default CmRepeater;

@@ -1,21 +1,13 @@
 {
     "presets": [
-        [
-            "@babel/preset-env",
-            {
-                "targets": {
-                    "node": "current"
-                }
-            }
-        ]
+        "env",
+        "stage-0"
     ],
     "plugins": [
-        [
-            "@babel/plugin-proposal-decorators",
-            {
-                "legacy": true
-            }
-        ],
-        "@babel/plugin-proposal-class-properties"
+        "add-module-exports",
+        "transform-regenerator",
+        "transform-decorators-legacy",
+        "transform-async-to-generator",
+        "transform-runtime"
     ]
 }
