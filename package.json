@@ -1,7 +1,7 @@
 {
-    "name": "mjml-campaign-monitor",
+    "name": "mjml-cm",
     "description": "Campaign Monitor compatible MJML v4 components",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "main": "lib/index.js",
     "scripts": {
         "build": "babel src -d lib --ignore '**/__test__/*.js'",

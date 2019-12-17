@@ -1,4 +1,4 @@
-# mjml-campaign-monitor for [MJML](https://mjml.io/)
+# mjml-cm for [MJML](https://mjml.io/)
 
 This project is intent to provide support for the Campaign Monitor custom tags
 on the MJML.
@@ -12,7 +12,7 @@ List of components:
 ## Setup
 
 ```
-npm install mjml-campaign-monitor
+npm install mjml-cm
 ```
 
 ## Usage
