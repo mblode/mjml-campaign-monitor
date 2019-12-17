@@ -15,16 +15,10 @@ class CmSingleline extends MjText {
     };
 
     renderContent() {
-        return `
-            <singleline
-                ${this.htmlAttributes({
-                    label: this.getAttribute('label'),
-                    repeatertitle: this.getAttribute('repeatertitle'),
-                })}
-            >
-                ${this.getContent()}
-            </singleline>
-        `;
+        return `<singleline ${this.htmlAttributes({
+            label: this.getAttribute('label'),
+            repeatertitle: this.getAttribute('repeatertitle'),
+        })}>${this.getContent()}</singleline>`;
     }
 }
 

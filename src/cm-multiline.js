@@ -14,15 +14,9 @@ class CmMultiline extends MjText {
     };
 
     render() {
-        return `
-            <multiline
-                ${this.htmlAttributes({
-                    label: this.getAttribute('label'),
-                })}
-            >
-                ${this.getContent()}
-            </multiline>
-        `;
+        return `<multiline${this.htmlAttributes({
+            label: this.getAttribute('label'),
+        })}>${this.getContent()}</multiline>`;
     }
 }
 

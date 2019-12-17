@@ -25,11 +25,7 @@ registerDependencies({
 
 class CmRepeater extends BodyComponent {
     render() {
-        return `
-            <repeater>
-            ${this.renderChildren(this.props.children)}
-            </repeater>
-        `;
+        return `<repeater>${this.renderChildren(this.props.children)}</repeater>`;
     }
 }
 

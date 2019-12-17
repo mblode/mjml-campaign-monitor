@@ -10,11 +10,7 @@ registerDependencies({
 
 class CmUnsubscribe extends MjText {
     renderContent() {
-        return `
-            <unsubscribe>
-                ${this.getContent()}
-            </unsubscribe>
-        `;
+        return `<unsubscribe>${this.getContent()}</unsubscribe>`;
     }
 }
 

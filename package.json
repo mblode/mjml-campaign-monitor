@@ -1,7 +1,7 @@
 {
     "name": "mjml-cm",
-    "description": "Campaign Monitor compatible MJML v4 components",
-    "version": "1.0.2",
+    "description": "Campaign Monitor MJML components",
+    "version": "1.0.3",
     "main": "lib/index.js",
     "author": {
         "name": "Matthew Blode",

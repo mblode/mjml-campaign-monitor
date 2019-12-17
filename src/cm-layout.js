@@ -28,14 +28,8 @@ export default class CmLayout extends BodyComponent {
     };
 
     render() {
-        return `
-        <layout
-          ${this.htmlAttributes({
-              label: this.getAttribute('label'),
-          })}
-        >
-        ${this.renderChildren(this.props.children)}
-        </layout>
-      `;
+        return `<layout ${this.htmlAttributes({ label: this.getAttribute('label') })}>${this.renderChildren(
+            this.props.children
+        )}</layout>`;
     }
 }

@@ -10,11 +10,7 @@ registerDependencies({
 
 class CmPreferences extends MjText {
     renderContent() {
-        return `
-            <preferences>
-                ${this.getContent()}
-            </preferences>
-        `;
+        return `<preferences>${this.getContent()}</preferences>`;
     }
 }
 
