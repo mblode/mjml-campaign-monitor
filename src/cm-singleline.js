@@ -8,7 +8,7 @@ registerDependencies({
     'cm-singleline': [],
 });
 
-class CmSingleline extends BodyComponent {
+export default class CmSingleline extends BodyComponent {
     static allowedAttributes = {
         label: 'string',
         repeatertitle: 'string',
@@ -18,8 +18,6 @@ class CmSingleline extends BodyComponent {
         return `<singleline ${this.htmlAttributes({
             label: this.getAttribute('label'),
             repeatertitle: this.getAttribute('repeatertitle'),
-        })}>${this.getContent()}</singleline>`;
+        })}>${this.renderChildren(this.props.children)}</singleline>`;
     }
 }
-
-export default CmSingleline;

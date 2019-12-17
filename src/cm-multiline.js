@@ -8,7 +8,7 @@ registerDependencies({
     'cm-multiline': [],
 });
 
-class CmMultiline extends BodyComponent {
+export default class CmMultiline extends BodyComponent {
     static allowedAttributes = {
         label: 'string',
     };
@@ -16,8 +16,6 @@ class CmMultiline extends BodyComponent {
     render() {
         return `<multiline${this.htmlAttributes({
             label: this.getAttribute('label'),
-        })}>${this.getContent()}</multiline>`;
+        })}>${this.renderChildren(this.props.children)}</multiline>`;
     }
 }
-
-export default CmMultiline;
