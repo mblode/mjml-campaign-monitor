@@ -11,6 +11,7 @@ List of components:
 - cm-singleline
 - cm-multiline
 - cm-unsubscribe
+- cm-webversion
 - cm-preferences
 
 ## Setup
