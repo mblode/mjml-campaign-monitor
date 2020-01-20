@@ -17,6 +17,6 @@ export default class CmPreferences extends MjText {
     };
 
     render() {
-        return `<div ${this.htmlAttributes({ style: 'text' })}><preferences>${this.getContent()}</preferences></div>`;
+        return `<div ${this.htmlAttributes({ style: 'text' })}><preferences ${this.htmlAttributes({ style: 'text' })}>${this.getContent()}</preferences></div>`;
     }
 }

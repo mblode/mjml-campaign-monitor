@@ -17,6 +17,6 @@ export default class CmWebversion extends MjText {
     };
 
     renderContent() {
-        return `<div ${this.htmlAttributes({ style: 'text' })}><webversion>${this.getContent()}</webversion></div>`;
+        return `<div ${this.htmlAttributes({ style: 'text' })}><webversion ${this.htmlAttributes({ style: 'text' })}>${this.getContent()}</webversion></div>`;
     }
 }

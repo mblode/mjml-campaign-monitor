@@ -17,6 +17,6 @@ export default class CmUnsubscribe extends MjText {
     };
 
     renderContent() {
-        return `<div ${this.htmlAttributes({ style: 'text' })}><unsubscribe>${this.getContent()}</unsubscribe></div>`;
+        return `<div ${this.htmlAttributes({ style: 'text' })}><unsubscribe ${this.htmlAttributes({ style: 'text' })}>${this.getContent()}</unsubscribe></div>`;
     }
 }
