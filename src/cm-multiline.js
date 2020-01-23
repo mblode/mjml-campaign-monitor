@@ -20,6 +20,7 @@ export default class CmMultiline extends MjText {
     render() {
         return `<div ${this.htmlAttributes({ style: 'text' })}><multiline ${this.htmlAttributes({
             label: this.getAttribute('label'),
+            style: 'text'
         })}>${this.getContent()}</multiline></div>`;
     }
 }

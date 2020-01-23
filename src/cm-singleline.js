@@ -23,6 +23,7 @@ export default class CmSingleline extends MjText {
         return `<div ${this.htmlAttributes({ style: 'text' })}><singleline ${this.htmlAttributes({
             label: this.getAttribute('label'),
             repeatertitle: this.getAttribute('repeatertitle'),
+            style: 'text'
         })}>${this.getContent()}</singleline></div>`;
     }
 }
