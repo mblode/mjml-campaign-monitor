@@ -43,7 +43,7 @@ npm install mjml-cm
 ```json
 {
   "packages": [
-    "node_modules/mjml-campaignmonitor/lib/index.js"
+    "node_modules/mjml-cm/index.js"
   ]
 }
 ```
